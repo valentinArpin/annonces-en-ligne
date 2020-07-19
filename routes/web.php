@@ -27,3 +27,7 @@ Route::get('/annonces', 'Adcontroller@index')->name('ad.index');
 Route::get('/annonce', 'AdController@create')->name('ad.create');
 Route::post('/annonce/create', 'Adcontroller@store')->name('ad.store');
 Route::post('/search', 'AdController@search')->name('ad.search');
+
+/* message routes */
+Route::get('/message/{seller_id}/{ad_id}', 'MessageController@create')
+->name('message.create');
